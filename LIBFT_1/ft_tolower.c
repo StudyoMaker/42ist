@@ -1,20 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gbezirci <gbezirci@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/10 12:54:56 by gbezirci          #+#    #+#             */
-/*   Updated: 2022/01/17 15:41:51 by gbezirci         ###   ########.fr       */
+/*   Created: 2022/01/17 15:07:48 by gbezirci          #+#    #+#             */
+/*   Updated: 2022/01/17 15:08:51 by gbezirci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h" 
+#include "libft.h"
 
-int	ft_isdigit(int str)
+int	ft_tolower(int c)
 {
-	if (str >= '0' && str <= '9')
-		return (1);
-	return (0);
+	if (c >= 'A' && c <= 'Z')
+		return (c + 32);
+	return (c);
 }

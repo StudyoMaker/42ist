@@ -1,20 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gbezirci <gbezirci@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/10 12:54:56 by gbezirci          #+#    #+#             */
-/*   Updated: 2022/01/17 15:41:51 by gbezirci         ###   ########.fr       */
+/*   Created: 2022/01/17 15:34:55 by gbezirci          #+#    #+#             */
+/*   Updated: 2022/01/17 15:35:10 by gbezirci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h" 
+#include "libft.h"
 
-int	ft_isdigit(int str)
+void	ft_putendl_fd(char const *s, int fd)
 {
-	if (str >= '0' && str <= '9')
-		return (1);
-	return (0);
+	if (s)
+	{
+		while (*s)
+		{
+			ft_putchar_fd(*s, fd);
+			s++;
+		}
+		ft_putchar_fd('\n', fd);
+	}
 }
