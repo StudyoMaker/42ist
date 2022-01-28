@@ -6,11 +6,12 @@
 /*   By: gbezirci <gbezirci@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/17 15:15:17 by gbezirci          #+#    #+#             */
-/*   Updated: 2022/01/17 15:15:33 by gbezirci         ###   ########.fr       */
+/*   Updated: 2022/01/28 11:07:53 by gbezirci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
 int	ft_atoi(const char *str)
 {
@@ -39,4 +40,11 @@ int	ft_atoi(const char *str)
 		i++;
 	}
 	return (number);
+}
+int main()
+{
+	int a;
+	a = ft_atoi("erengokhan");
+	printf("%d",a);
+	return(0);
 }

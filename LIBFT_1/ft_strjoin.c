@@ -6,7 +6,7 @@
 /*   By: gbezirci <gbezirci@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/17 15:26:12 by gbezirci          #+#    #+#             */
-/*   Updated: 2022/01/17 15:26:23 by gbezirci         ###   ########.fr       */
+/*   Updated: 2022/01/28 15:15:10 by gbezirci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,16 +23,16 @@ char	*ft_strjoin(const char *s1, const char *s2)
 		return (NULL);
 	alan = (ft_strlen(s1) + ft_strlen(s2) + 1);
 	str = malloc(sizeof(char) * alan);
-	i = -1;
-	j = -1;
+	i = 0;
+	j = 0;
 	if (!str)
 	{
 		free(str);
 		return (NULL);
 	}	
-	while (s1[++i])
+	while (s1[i++])
 		str[i] = s1[i];
-	while (s2[++j])
+	while (s2[j++])
 		str[i++] = s2[j];
 	str[i] = '\0';
 	return (str);

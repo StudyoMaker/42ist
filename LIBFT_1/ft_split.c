@@ -6,11 +6,12 @@
 /*   By: gbezirci <gbezirci@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/17 15:28:16 by gbezirci          #+#    #+#             */
-/*   Updated: 2022/01/17 16:23:50 by gbezirci         ###   ########.fr       */
+/*   Updated: 2022/01/28 11:51:25 by gbezirci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
 static int	count_words(const char *str, char c)
 {
@@ -71,4 +72,12 @@ char		**ft_split(char const *s, char c)
 	}
 	split[j] = 0;
 	return (split);
+}
+int main()
+{
+	char a=' ';
+	char *s="merhabalar ben geldim";
+	char **str;
+	str = ft_split(s,a);
+	printf("%s", str[2]);
 }
