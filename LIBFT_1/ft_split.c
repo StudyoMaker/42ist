@@ -6,87 +6,62 @@
 /*   By: gbezirci <gbezirci@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/17 15:28:16 by gbezirci          #+#    #+#             */
-/*   Updated: 2022/01/17 16:55:55 by gbezirci         ###   ########.fr       */
+/*   Updated: 2022/02/28 17:30:33 by gbezirci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <stddef.h>
 #include "libft.h"
 
-static size_t	word_size(char *s, char c)
+ssize_t	ft_wordcount(char const *s, char c)
 {
 	size_t	i;
 
 	i = 0;
-	while (*s && (*s == c))
-			s++;
 	while (*s)
 	{
-		i++;
+		if (*s && *s != c)
+			i++;
 		while (*s && *s != c)
 			s++;
-		while (*s && *s == c)
+		if (*s && *s == c)
 			s++;
 	}
 	return (i);
 }
 
-static size_t	str_l(char **s, char c)
+int	ft_errorcheck(const char *s, size_t *count, char c, char ***str)
 {
-	size_t	i;
-
-	i = 0;
-	while (**s && (**s == c))
-			(*s)++;
-	while ((*s)[i] != c && (*s)[i])
-			i++;
-	return (i);
-}
-
-static char	*jc(char *s, char c)
-{
-	while (*s != c && *s)
-		s++;
-	return (s);
-}
-
-static	char	*init_s(char **s, char c)
-{
-	size_t	len;
-	char	*cc;
-
-	len = 0;
-	len = str_l(s, c);
-	cc = (char *)malloc(len +1);
-	if (!cc)
-		return (NULL);
-	ft_strlcpy((char *)cc, (char *)*s, len + 1);
-	cc[len] = '\0';
-	return (cc);
+	if (!s)
+		return (0);
+	*count = ft_wordcount(s, c);
+	*str = malloc ((*count + 1) * sizeof(char *));
+	if (!*str)
+		return (0);
+	return (1);
 }
 
 char	**ft_split(char const *s, char c)
-{	
-	char	**ch;
+{
+	char	**str;
 	size_t	i;
-	size_t	k;
+	size_t	j;
+	size_t	count;
 
-	k = 0;
-	if (!s)
+	if (!ft_errorcheck (s, &count, c, &str))
 		return (NULL);
-	i = word_size((char *)s, c);
-	ch = (char **)malloc(i * sizeof(char *) + 1);
-	if (!ch)
-		return (NULL);
-	while (k < i)
+	j = 0;
+	while (*s)
 	{
-		ch[k] = init_s((char **)&s, c);
-		if (!ch[k])
-			return (NULL);
-		s = (char const *) jc((char *)s, c);
-		k++;
+		i = 0;
+		while (s[i] && s[i] != c)
+			i++;
+		if (i != 0 && j < count)
+		{
+			str[j] = ft_substr (s, 0, i);
+			j++;
+		}
+		s += i + 1;
 	}
-	ch[i] = NULL;
-	return (ch);
+	str[count] = NULL;
+	return (str);
 }

@@ -6,7 +6,7 @@
 /*   By: gbezirci <gbezirci@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/10 16:20:02 by gbezirci          #+#    #+#             */
-/*   Updated: 2022/01/10 16:20:17 by gbezirci         ###   ########.fr       */
+/*   Updated: 2022/02/28 17:41:13 by gbezirci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,5 +50,8 @@ char	*ft_strjoin(const char *s1, const char *s2);
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 char	*ft_strtrim(char const *s1, char const *set);
 void	ft_striteri(char *s, void (*f)(unsigned int, char*));
+
+char	**ft_split(char const *s, char c);
+
 
 #endif

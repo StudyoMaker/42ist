@@ -6,36 +6,33 @@
 /*   By: gbezirci <gbezirci@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/17 15:24:38 by gbezirci          #+#    #+#             */
-/*   Updated: 2022/01/17 15:24:51 by gbezirci         ###   ########.fr       */
+/*   Updated: 2022/02/28 18:31:01 by gbezirci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_substr(const char *s, unsigned int start, size_t len)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	char	*str;
-	size_t	i;
-	size_t	strsayac;
+	char		*str;
+	size_t		i;
+	size_t		x;
 
-	i = -1;
-	strsayac = -1;
-	if (start >= ft_strlen((char *)s))
-		return (ft_strdup(""));
+	i = start;
+	x = 0;
+	if (!s)
+		return (NULL);
 	if (len > ft_strlen(s))
-		str = malloc(sizeof(char) * ft_strlen(s));
-	else
-		str = malloc(sizeof(char) * len + 1);
-	if (!str)
+		len = ft_strlen(s);
+	str = (char *)malloc((len + 1) * sizeof(char));
+	if (!str || !s)
+		return (NULL);
+	while (i <= ft_strlen(s) && len > x)
 	{
-		free(str);
-		return (0);
+		str[x] = s[i];
+		x++;
+		i++;
 	}
-	while (s[start] && ++i <= len)
-	{
-		str[++strsayac] = (char)s[start];
-		start++;
-	}
-	str[len] = '\0';
+	str[x] = '\0';
 	return (str);
 }
