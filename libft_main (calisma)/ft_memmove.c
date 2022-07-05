@@ -6,7 +6,7 @@
 /*   By: gbezirci <gbezirci@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/13 18:53:55 by aergul            #+#    #+#             */
-/*   Updated: 2022/06/29 17:49:16 by gbezirci         ###   ########.fr       */
+/*   Updated: 2022/07/05 13:30:29 by gbezirci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,10 +30,10 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 		return (ft_memcpy(dst, src, len));
 	return (dst);
 }
-/*#include <stdio.h>
-int main()
+#include <stdio.h>
+/*int main()
 {
-	char a[] = "agalarmagalar";
-	char b[] = "bruhmomen";
-	printf("%s", ft_memmove(a,b,10));
+	char a[] = "bunuyaziracak";
+	char b[] = "tumcumleninuzerine";
+	printf("%s", ft_memmove(a,b,7));
 }*/

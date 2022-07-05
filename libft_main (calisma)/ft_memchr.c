@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aergul <aergul@student.42istanbul.com.t    +#+  +:+       +#+        */
+/*   By: gbezirci <gbezirci@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/13 18:53:38 by aergul            #+#    #+#             */
-/*   Updated: 2022/01/22 16:46:32 by aergul           ###   ########.fr       */
+/*   Updated: 2022/07/05 16:37:18 by gbezirci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,5 +35,5 @@ void	*ft_memchr(const void *s, int c, size_t n)
 /*int main()
 {
 	char a[] = "merhabalar";
-	printf("%s", (char *)ft_memchr(a,'b',10));
+	printf("%s", (char *)ft_memchr(a,'a',15));
 }*/

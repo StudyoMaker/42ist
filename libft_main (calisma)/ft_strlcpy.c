@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aergul <aergul@student.42istanbul.com.t    +#+  +:+       +#+        */
+/*   By: gbezirci <gbezirci@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/13 18:54:53 by aergul            #+#    #+#             */
-/*   Updated: 2022/01/19 16:06:10 by aergul           ###   ########.fr       */
+/*   Updated: 2022/07/05 14:17:31 by gbezirci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,8 +33,8 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 /*int main()
 {
 	char a[] = "merhaba";
-	char b[] = "agubugu";
-	ft_strlcpy(a,b,7);
-	printf("&zu", ft_strclpy(a));
+	char b[] = "dost";
+	ft_strlcpy(a, b, 8);
+	printf("%s", a);
 	return(0);
 }*/

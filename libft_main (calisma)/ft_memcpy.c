@@ -6,7 +6,7 @@
 /*   By: gbezirci <gbezirci@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/13 18:53:49 by                   #+#    #+#             */
-/*   Updated: 2022/06/29 16:52:14 by gbezirci         ###   ########.fr       */
+/*   Updated: 2022/07/05 13:25:05 by gbezirci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,5 +34,5 @@ int main()
 {
 	char a[] = "aaaaaaX";
 	char b[] = "bbbbbbbbbbbbbbbb";
-	printf("%s", (char*)ft_memcpy(b,a,5));
+	printf("%s", (char*)ft_memcpy(b,a,7));
 }
